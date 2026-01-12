@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 from typing import List
 
 
-HYPEN_DOT_E  ='-e .'
+HYPHEN_DOT_E  ='-e .'
 
 def get_requirements(file_path:str)->List[str]:
     """
@@ -18,8 +18,8 @@ def get_requirements(file_path:str)->List[str]:
         requirements = file_object.readlines()    # out put is ['pandas\n', 'numpy\n', 'seaborn\n'] -- has \n at end
         [req.replace('\n','') for req in requirements]
 
-    if HYPEN_DOT_E in requirements:
-        requirements.remove(HYPEN_DOT_E)
+    if HYPHEN_DOT_E in requirements:
+        requirements.remove(HYPHEN_DOT_E)
     
     return requirements
     
