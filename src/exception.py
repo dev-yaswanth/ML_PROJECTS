@@ -30,8 +30,11 @@ class CustomException(Exception):
 
 
 if __name__ == "__main__":
+    #from src.logger  import logging  # this line alone works instead of below 2 lines but it means Give me the logging object from src.logger. and creates confusion for readers.
     import logging        # use logging
     import src.logger     # configure logging
+    # and move the imports to top
+
     logging.info('Testing exception module')
     try:
         a = 10 / 0
